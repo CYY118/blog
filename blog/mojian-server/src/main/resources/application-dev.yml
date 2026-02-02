@@ -1,0 +1,90 @@
+server:
+  port: 8800
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  datasource:
+    url: jdbc:mysql://192.168.31.8:3306/blog?characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai&tinyInt1isBit=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: mysql_5ADmCy
+  redis:
+    host: 192.168.31.8
+    port: 6379
+    timeout: 3000
+    database: 8
+    password: redis_czipaN # 如果有密码，请填写
+
+
+#==============================knife4j配置==============================
+knife4j:
+  enable: true
+  basic:
+    enable: true
+    username: test
+    password: 123456
+  openapi:
+    title: 拾壹博客接口文档
+    description: 一个专注于技术分享的博客平台
+    # aaa"
+    email: 248954763@qq.com
+    concat: 拾壹
+    url: https://www.shiyit.com
+    version: v1.0
+    group:
+      test1:
+        group-name: 分组名称
+        api-rule: package
+        api-rule-resources:
+          - com.mojian
+
+#==============================公众号配置==============================
+wechat:
+  app-id:
+  # 公众号AppSecret
+  secret:
+  # 公众号Token
+  token:
+  # 公众号AES Key
+  aesKey:
+
+  appletAppId:
+  appletSecret:
+
+#==============================豆包推理AI配置=======================================
+ai:
+  # API Key
+  apiKey:
+  baseUrl: https://ark.cn-beijing.volces.com/api/v3
+  # 推理接入点ID
+  model:
+
+#==============================邮箱配置=======================================
+mail:
+  smtp:
+    host: smtp.mxhichina.com
+    port: 465
+    email: fannan@yang.band
+    password: 6ij8VLENopTDd67l
+
+#============================第三方登录配置信息===================================
+qq:
+  app-id:
+  app-secret:
+  redirect-url: https://www.shiyit.com/mojian/api/auth/callback/qq
+weibo:
+  app-id:
+  app-secret:
+  redirect-url: https://www.shiyit.com/mojian/api/auth/weibo
+
+gitee:
+  app-id:
+  app-secret:
+  redirect-url: https://www.shiyit.com/mojian/api/auth/callback/gitee
+
+github:
+  app-id:
+  app-secret:
+  redirect-url: https://www.shiyit.com/shiyi/mojian/api/auth/callback/github
